@@ -11,12 +11,12 @@ def main():
 def getSales():
     monthlySales = float(input('Enter the monthly sales $'))
     return monthlySales
-    salesIncrease = getIncrease(salesIncrease)
+    salesIncrease = getIncrease()
 
 # This function gets the percent of increease in sales
-def getIncrease(salesIncrease):
+def getIncrease():
     salesIncrease = float(input('Enter the percent of sales increase: '))
-    salesIncrease = float(salesIncrease)
+    salesIncrease = getIncrease ()
     salesIncrease = salesIncrease / 100
     return salesIncrease
     storeAmount = storeBonus(monthlySales)
@@ -39,11 +39,11 @@ def storeBonus(monthlySales):
 
 # This function determines the empAmount bonus
 def empBonus(salesIncrease):
-    if salesIncrease >= 5:
+    if salesIncrease >= .05:
         empAmount = 75
-    if salesIncrease >= 4:
+    if salesIncrease >= .04:
         empAmount = 50
-    if salesIncrease >= 3:
+    if salesIncrease >= .03:
         empAmount = 40
     else:
         empAmount = 0
@@ -51,10 +51,10 @@ def empBonus(salesIncrease):
 
 # This function prints the bonus information
 def printBonus(storeAmount, empAmount):
-    print ('The store bonus amount is $'), storeAmount
-    print ('The employee bonus amount is $'), empAmount
+    print ('The store bonus amount is $', storeAmount)
+    print ('The employee bonus amount is $', empAmount)
     if storeAmount == 6000 and empAmount == 75:
-        print('Congrats! You have reached the hiighest bonus amounts possible!')
+        print('Congrats! You have reached the highest bonus amounts possible!')
 
 
 # calls main
